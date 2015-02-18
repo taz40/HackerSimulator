@@ -1,5 +1,8 @@
 package com.weebly.lightsoutgming.hacking.simulator.main;
 
+import java.awt.Color;
+import java.awt.Font;
+
 import io.brace.lightsoutgaming.engine.LightsOut;
 import io.brace.lightsoutgaming.engine.Network.NetworkUtils;
 
@@ -20,6 +23,7 @@ public class Main extends LightsOut {
 	protected void render() {
 		// TODO Auto-generated method stub
 		screen.clear();
+		screen.renderString(10, 10, "Whatever Text I Want!", Color.red, new Font("Default", 0, 20), true);
 		for(int i = 0; i < NetworkUtils.myObjects.size(); i++){
 			NetworkUtils.myObjects.get(i).render(screen);
 		}
